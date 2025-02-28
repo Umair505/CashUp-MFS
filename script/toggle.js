@@ -1,5 +1,5 @@
 document.getElementById("add").style.display = "none";
-document.getElementById("cashout").style.display = "none";
+// document.getElementById("cashout").style.display = "none";
 
 document.getElementById("add-btn").addEventListener("click",
     function(){
