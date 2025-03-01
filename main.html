@@ -51,7 +51,7 @@
                     </div>
                     <div class="border p-3 py-4 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center justify-center text-center">
                         <img class="mx-auto h-7 w-7 mb-4" src="./assets/transaction1.png" alt="">
-                        <p class="font-medium text-sm">Transactions</p>
+                        <p id="transaction" class="font-medium text-sm">Transactions</p>
                     </div>
                     <div class="border p-3 py-4 rounded-xl shadow-md hover:shadow-lg transition-shadow flex flex-col items-center justify-center text-center">
                         <img class="mx-auto h-7 w-7 mb-4" src="./assets/add_money.png" alt="">
@@ -72,9 +72,9 @@
                           </select>
                       <div class="form-control rounded-xl">
                         <label class="label">
-                          <span class="label-text">Bank Account Number</span>
+                          <span  class="label-text">Bank Account Number</span>
                         </label>
-                        <input type="number" placeholder="Enter 11 digit account number" class="input input-bordered" required />
+                        <input id="bank-account-no" value="01770039505" type="number" placeholder="Enter 11 digit account number" class="input input-bordered" required />
                       </div>
                       <div class="form-control rounded-xl">
                         <label class="label">
@@ -85,7 +85,7 @@
                       </div>
                       <div class="form-control rounded-xl">
                         <label class="label">
-                          <span class="label-text">Pin Number</span>
+                          <span class="label-text" value="1234">Pin Number</span>
                         </label>
                         <input id="pin" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
                         
@@ -128,11 +128,20 @@
                     </form>
                   </div>
             </section>
+          
+            <!-- Transaction Section -->
+            <section id="transaction-section" class="text-center mx-auto flex flex-col items-center pb-4">
+              <h1 class="font-bold text-blue-600 text-2xl mb-4 mt-4">Transaction History</h1>
+              <div id="transaction-container" class="w-full max-w-2xl bg-white  rounded-lg p-6 space-y-4">
+                  
+              </div>
+            </section>
         </header>
     </section>
     <script src="./script/addMoney.js"></script>
     <script src="./script/toggle.js"></script>
     <script src="./script/cashout.js"></script>
     <script src="./script/utilities.js"></script>
+    <script src="./script/transactionHistory.js"></script>
 </body>
 </html>

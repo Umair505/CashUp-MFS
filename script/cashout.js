@@ -15,7 +15,15 @@ document.getElementById("cashout-button").addEventListener("click",
                 {
                     document.getElementById("main-balance").innerText = updatedBalance - convertedAmount;
                     alert("Cashout successful!")
+                    if (getInputInnerText("main-balance") === 0) {
+                        alert("You need to Deposit. Your account balance is 0.");
+                    }
+                    const container = document.getElementById("transaction-container");
+                    const p = document.createElement("p");
+                    p.innerText = `Successfully cashout Tk. ${amount} from this Agent no: ${agentNumber}`;
+                    container.appendChild(p);
                 }
+                
                 else{
                     alert("Insufficient balance!")
                 }
